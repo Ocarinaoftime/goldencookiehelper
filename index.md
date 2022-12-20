@@ -4,6 +4,6 @@ A little text near the newsletter to tell you if and how many golden cookies are
 Just bookmark this to enable the addon.
 ```javascript
 javascript: (function() {
-   Game.LoadMod('https://raw.githubusercontent.com/Ocarinaoftime/goldencookiehelper/main/mod.js')
+   Game.LoadMod('https://ocarinaoftime.github.io/goldencookiehelper/mod.js')
 }());
 ```
