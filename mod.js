@@ -16,5 +16,7 @@ document.body.append(h);
 document.addEventListener("keypress", (event) => {
     if (event.key == " ") {
         Game.ClickCookie();
+    } else {
+        //Do nothing
     }
 });
