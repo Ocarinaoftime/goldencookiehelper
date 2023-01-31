@@ -10,13 +10,11 @@ function loop() {
 var h = document.createElement("div");h.style.position = "absolute";
 h.style.fontSize = '20px';
 h.innerHTML = "No golden/wrath cookies on screen.";
-h.style.left = "0px";
-h.style.top = '20px';
+h.style.left = "550px";
+h.style.top = '100px';
 document.body.append(h);
 document.addEventListener("keypress", (event) => {
     if (event.key == " ") {
         Game.ClickCookie();
-    } else {
-        //Do nothing
     }
 });
