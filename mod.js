@@ -14,7 +14,7 @@ h.id = 'text'
 h.style.fontSize = '20px';
 h.innerHTML = "No golden/wrath cookies on screen.";
 //h.style.left = "550px";
-//h.style.top = '100px';
+h.style.top = '50px';
 document.getElementById('comments').append(h);
 document.addEventListener("keypress", (event) => {
     if (event.key == " ") {
