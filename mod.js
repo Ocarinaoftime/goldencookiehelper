@@ -7,7 +7,7 @@ function loop() {
     }
     window.requestAnimationFrame(loop);
 }
-var h = document.createElement("div");h.style.position = "absolute";
+var h = document.createElement("div");h.style.position = "relative";
 h.style.fontSize = '20px';
 h.innerHTML = "No golden/wrath cookies on screen.";
 h.style.left = "550px";
