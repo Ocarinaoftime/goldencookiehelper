@@ -7,12 +7,15 @@ function loop() {
     }
     window.requestAnimationFrame(loop);
 }
-var h = document.createElement("div");h.style.position = "relative";
+var h = document.createElement("div");
+h.style.position = "relative";
+h.className = 'inset title';
+h.id = 'text'
 h.style.fontSize = '20px';
 h.innerHTML = "No golden/wrath cookies on screen.";
-h.style.left = "550px";
-h.style.top = '100px';
-document.body.append(h);
+//h.style.left = "550px";
+//h.style.top = '100px';
+document.getElementById('comments').append(h);
 document.addEventListener("keypress", (event) => {
     if (event.key == " ") {
         Game.ClickCookie();
