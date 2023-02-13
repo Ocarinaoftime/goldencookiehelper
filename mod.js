@@ -13,7 +13,7 @@ h.className = 'inset title';
 h.id = 'text'
 h.style.fontSize = '17px';
 h.innerHTML = "No golden/wrath cookies on screen.";
-h.style.left = "-20px";
+h.style.left = "-30px";
 h.style.top = '55px';
 document.getElementById('comments').append(h);
 document.addEventListener("keypress", (event) => {
