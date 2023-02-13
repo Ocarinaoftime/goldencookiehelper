@@ -21,3 +21,5 @@ document.addEventListener("keypress", (event) => {
         Game.ClickCookie();
     }
 });
+
+//Game.Notify('thing', 'stuff', [27, 6])
