@@ -1,8 +1,24 @@
+function once(fn, context) { 
+    var result;
+    return function() { 
+        if (fn) {
+            result = fn.apply(context || this, arguments);
+            fn = null;
+        }
+        return result;
+    };
+}
+
+function changeText() {
+    h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
+    document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
+    Game.Notify('thing', 'stuff', [27, 6])
+}
+
 window.requestAnimationFrame(loop)
 function loop() {
     if (document.getElementById("shimmers").hasChildNodes()) {
-        h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
-        document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
+        once(changeText)
     } else {
         h.innerHTML = "No golden/wrath cookies on screen.";
     }
@@ -22,5 +38,7 @@ document.addEventListener("keypress", (event) => {
         Game.ClickCookie();
     }
 });
+
+
 
 //Game.Notify('thing', 'stuff', [27, 6])
