@@ -2,6 +2,7 @@ window.requestAnimationFrame(loop)
 function loop() {
     if (document.getElementById("shimmers").hasChildNodes()) {
         h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
+        document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
     } else {
         h.innerHTML = "No golden/wrath cookies on screen.";
     }
