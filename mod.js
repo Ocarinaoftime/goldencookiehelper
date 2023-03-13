@@ -12,13 +12,13 @@ function once(fn, context) {
 function changeText() {
     h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
     document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
-    Game.Notify('thing', 'stuff', [27, 6])
+    once(Game.Notify('thing', 'stuff', [27, 6]))
 }
 
 window.requestAnimationFrame(loop)
 function loop() {
     if (document.getElementById("shimmers").hasChildNodes()) {
-        once(changeText)
+        changeText()
     } else {
         h.innerHTML = "No golden/wrath cookies on screen.";
     }
