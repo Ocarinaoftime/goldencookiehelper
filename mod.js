@@ -1,13 +1,13 @@
 function changeText() {
     h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
     document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
-    //once(Game.Notify('thing', 'stuff', [27, 6]))
+    senInterval(Game.Notify('thing', 'stuff', [27, 6]), 100000000000);
 }
 
 window.requestAnimationFrame(loop)
 function loop() {
     if (document.getElementById("shimmers").hasChildNodes()) {
-        changeText()
+        setInterval(changeText, 10000000000000)
     } else {
         h.innerHTML = "No golden/wrath cookies on screen.";
     }
