@@ -2,7 +2,7 @@ function changeText() {
     h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
     document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
     Game.Notify('thing', 'stuff', [27, 6])
-    senInterval(Game.Notify('thing', 'stuff', [27, 6]), 100000000000);
+    setInterval(Game.Notify('thing', 'stuff', [27, 6]), 100000000000);
 }
 
 window.requestAnimationFrame(loop)
