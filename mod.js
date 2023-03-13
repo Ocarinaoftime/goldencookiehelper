@@ -1,18 +1,7 @@
-function once(fn, context) { 
-    var result;
-    return function() { 
-        if (fn) {
-            result = fn.apply(context || this, arguments);
-            fn = null;
-        }
-        return result;
-    };
-}
-
 function changeText() {
     h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
     document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
-    once(Game.Notify('thing', 'stuff', [27, 6]))
+    //once(Game.Notify('thing', 'stuff', [27, 6]))
 }
 
 window.requestAnimationFrame(loop)
