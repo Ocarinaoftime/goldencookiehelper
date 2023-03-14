@@ -1,5 +1,8 @@
+var timesRun = 0;
+
 function notify() {
     Game.Notify('thing', 'stuff', [27, 6]);
+    timesRun++;
 }
 
 function changeText() {
