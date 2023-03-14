@@ -1,11 +1,11 @@
 function notify() {
-    setInterval(Game.Notify('thing', 'stuff', [27, 6]), 100000000000);
+    Game.Notify('thing', 'stuff', [27, 6]);
 }
 
 function changeText() {
     h.innerHTML = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
     document.title = `${document.getElementById("shimmers").childElementCount} golden/wrath cookie(s) is on screen!`;
-    notify()
+    setInterval(notify, 10000000000)
 }
 
 window.requestAnimationFrame(loop)
